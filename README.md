@@ -9,8 +9,8 @@
 import UPDATECHECK
 UPDATECHECK.check(version,uri)
 ``` 
-`version`为程序目前的版本  
-`uri`为最新版本号数据源地址(http/https)  
+ `version`为程序目前的版本  
+ `uri`为最新版本号数据源地址(http/https)  
 例：  
 ```python
 import UPDATECHECK
