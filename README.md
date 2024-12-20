@@ -14,5 +14,7 @@ UPDATECHECK.check(version,uri)
 例：  
 ```python
 import UPDATECHECK
-UPDATECHECK.check("1.0.4","https://github.com/Squirrel963/parrot_web_database")
+UPDATECHECK.check("1.0.4","https://squirrel963.github.io/parrot_web_database/WTC_clientversion/index.md")
 ``` 
+以上代码将使更新检查器获取`https://squirrel963.github.io/parrot_web_database/WTC_clientversion/index.md`的内容  
+并将它与输入的程序版本`1.0.4`进行比较  
