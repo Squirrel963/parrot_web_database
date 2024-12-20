@@ -9,9 +9,9 @@
 import UPDATECHECK
 UPDATECHECK.check(version,uri)
 ``` 
- `version`为程序目前的版本  
- `uri`为最新版本号数据源地址(http/https)  
-例：  
+`version`为程序目前的版本  
+`uri`为最新版本号数据源地址(http/https)  
+ 例：  
 ```python
 import UPDATECHECK
 UPDATECHECK.check("1.0.4","https://squirrel963.github.io/parrot_web_database/WTC_clientversion/index.md")
