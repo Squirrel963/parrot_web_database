@@ -1,5 +1,5 @@
 # Parrot Web Database
-![](PWD_ct.svg)  
+![额，由于一些问题，该图片没能正常显示](PWD_ct.svg "空驱动器？不是我干的。")  
 一个基于web网页实现的伪数据库  
 为Parrot_X系列程序客户端提供数据  
 **~~仅此而已！~~**
