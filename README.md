@@ -1,8 +1,11 @@
-# parrot_database
+# parrot_web_database
+![][PWD_ct.svg]
 一个基于web网页实现的伪数据库  
-为parrot系列程序客户端提供数据  
+为Parrot_X系列程序客户端提供数据  
 仅此而已！
 >由于一些格式显示问题，如果您使用的是Edge浏览器，请关闭翻译后阅读本文
+## 数据库信息调用
+要获取PWD数据库中
 ## 对于Parrot_X系列程序的更新检查
 可以在此仓库下载专用的全自动更新检查模块{[下载](updatechecker)}  
 程序内调用方法：
