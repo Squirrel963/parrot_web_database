@@ -7,8 +7,8 @@
 
 __锚点引导：__  
 [数据库信息调用](#数据库信息调用)  
-[利用PWD数据库进行更新检查](#对于Parrot_X系列程序的更新检查)
-
+[数据库信息命名格式](#数据库信息命名格式)  
+[利用PWD数据库进行更新检查](#对于Python程序的更新检查)
 
 ## 数据库信息调用
 要获取PWD数据库中的信息  
@@ -16,7 +16,15 @@ __锚点引导：__
 
 squirrel963.github.io/parrot_web_database/`你需要的数据名称`/index.md  
 我们建议在地址末尾加入**index.md**，因为这样能去除大量***对程序来说没有用的html元素***，以便处理
-## 对于Parrot_X系列程序的更新检查
+
+## 数据库信息命名格式
+PWD通用数据名称命名格式：`项目名称`_`数据类型`  
+数据类型标签：  
+`clientversion`：目标项目的最新版本号  
+`proversion`：目标项目的测试/特殊版本的最新版本号  
+`allinfo`：适用于目标项目的公告  
+
+## 对于Python程序的更新检查
 可以在此仓库下载专用的全自动更新检查模块{[下载](updatechecker)}  
 程序内调用方法(python)：
 ```python
@@ -30,5 +38,5 @@ UPDATECHECK.check(version,uri)
 import UPDATECHECK
 UPDATECHECK.check("1.0.4","https://squirrel963.github.io/parrot_web_database/WTC_clientversion/index.md")
 ``` 
-以上代码将使更新检查器获取`https://squirrel963.github.io/parrot_web_database/WTC_clientversion/index.md`的内容  
+以上代码将使更新检查器获取`WTC_clientversion`的数据  
 并将它与输入的程序版本`1.0.4`进行比较  
