@@ -2,7 +2,7 @@
 ![](PWD_ct.svg)  
 一个基于web网页实现的伪数据库  
 为Parrot_X系列程序客户端提供数据  
-仅此而已！
+**~~仅此而已！~~**
 >由于一些格式显示问题，如果您使用的是Edge浏览器，请关闭翻译后阅读本文
 
 __锚点引导：__  
@@ -14,8 +14,8 @@ __锚点引导：__
 要获取PWD数据库中的信息  
 需通过github.io页面访问：  
 
-squirrel963.github.io/parrot_web_database/`你需要的数据名称`/index.md
-
+squirrel963.github.io/parrot_web_database/`你需要的数据名称`/index.md  
+我们建议在地址末尾加入**index.md**，因为这样能去除大量***对程序来说没有用的html元素***，以便处理
 ## 对于Parrot_X系列程序的更新检查
 可以在此仓库下载专用的全自动更新检查模块{[下载](updatechecker)}  
 程序内调用方法(python)：
