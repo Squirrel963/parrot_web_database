@@ -8,7 +8,7 @@
 要获取PWD数据库中
 ## 对于Parrot_X系列程序的更新检查
 可以在此仓库下载专用的全自动更新检查模块{[下载](updatechecker)}  
-程序内调用方法：
+程序内调用方法(python)：
 ```python
 import UPDATECHECK
 UPDATECHECK.check(version,uri)
