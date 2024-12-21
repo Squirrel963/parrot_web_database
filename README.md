@@ -1,4 +1,4 @@
-# parrot_web_database
+# Parrot Web Database
 ![](PWD_ct.svg)  
 一个基于web网页实现的伪数据库  
 为Parrot_X系列程序客户端提供数据  
