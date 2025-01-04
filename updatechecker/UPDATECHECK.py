@@ -20,3 +20,19 @@ def check(version, uri):
     except:
         print('[ 更新 ]：检查失败          ')
     return updated
+def getlog(uri):
+    uplog = requests.get(uri, verify=False).content.decode("utf-8").replace("\n"," ").split("/")
+    uplog.pop(0)
+    up_dict = {}
+    logvlist = []
+    logslist = []
+    for i in uplog:
+        logvlist.append(i.split("：")[0])
+        logslist.append(i.split("：")[1])
+    seg = zip(logvlist,logslist)
+    return seg
+
+if __name__ == '__main__':
+    print("UPDATECHECK模块版本自检：")
+    check("1.2" ,"https://squirrel963.github.io/parrot_web_database/UC_clientversion/index.md")
+    wait = input("*按下enter退出*")
