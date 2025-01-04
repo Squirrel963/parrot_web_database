@@ -30,7 +30,7 @@ def getlog(uri):
         logvlist.append(i.split("：")[0])
         logslist.append(i.split("：")[1])
     seg = zip(logvlist,logslist)
-    return seg
+    return dict(seg)
 
 if __name__ == '__main__':
     print("UPDATECHECK模块版本自检：")
