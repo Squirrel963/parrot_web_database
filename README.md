@@ -8,7 +8,9 @@
 __锚点引导：__  
 [数据库信息调用](#数据库信息调用)  
 [数据库信息命名格式](#数据库信息命名格式)  
-[利用PWD数据库进行更新检查](#对于Python程序的更新检查)
+[PWD数据库配套更新检查模块](#PWD数据库配套更新检查模块)  
+[利用PWD数据库进行更新检查](#对于Python程序的更新检查)  
+[利用PWD数据库获取更新日志](#对于Python程序的更新日志获取)  
 
 ## 数据库信息调用
 要获取PWD数据库中的信息  
@@ -26,8 +28,12 @@ PWD通用数据名称命名格式：`项目名称`_`数据类型`
 `clientlast`：目标项目的最新版本的文件存档  
 `prolast`：目标项目的测试/特殊版本的文件存档
 
+# PWD数据库配套更新检查模块
+可以在此仓库下载专用的全自动更新检查模块(适用于Python){[下载](updatechecker)}  
+
 ## 对于Python程序的更新检查
-可以在此仓库下载专用的全自动更新检查模块{[下载](updatechecker)}  
+>在进行以下操作前，您需要获取[PWD数据库配套更新检查模块](#PWD数据库配套更新检查模块)  
+
 程序内调用方法(python)：
 ```python
 import UPDATECHECK
@@ -42,3 +48,20 @@ UPDATECHECK.check("1.0.4","https://squirrel963.github.io/parrot_web_database/WTC
 ``` 
 以上代码将使更新检查器获取`WTC_clientversion`的数据  
 并将它与输入的程序版本`1.0.4`进行比较  
+
+## 对于Python程序的更新日志获取
+>在进行以下操作前，您需要获取[PWD数据库配套更新检查模块](#PWD数据库配套更新检查模块)  
+
+程序内调用方法(python)：
+```python
+import UPDATECHECK
+log = UPDATECHECK.uplog(uri)
+``` 
+`uri`为最新版本号数据源地址(http/https)  
+ 例：  
+```python
+import UPDATECHECK
+log = UPDATECHECK.check("https://squirrel963.github.io/parrot_web_database/WTC_allinfo/index.md")
+```
+以上代码将使更新检查器获取`WTC_allinfo`的数据  
+并将数据打包成一个字典赋值到`log`
