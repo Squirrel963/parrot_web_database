@@ -30,7 +30,7 @@ PWD通用数据名称命名格式：`项目名称`_`数据类型`
 
 # PWD数据库配套更新检查模块
 可以在此仓库下载专用的全自动更新检查模块(适用于Python)  
-{[下载](updatechecker/UPDATECHECK.py)}  
+{  [下载](updatechecker/UPDATECHECK.py)  }  
 
 ### 对于Python程序的更新检查
 >在进行以下操作前，您需要先获取[PWD数据库配套更新检查模块](#PWD数据库配套更新检查模块)  
