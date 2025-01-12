@@ -32,10 +32,13 @@ PWD通用数据名称命名格式：`项目名称`_`数据类型`
 可以在此仓库下载专用的全自动更新检查模块(适用于Python)  
 {  [下载](updatechecker/UPDATECHECK.py)  }  
 
-### 对于Python程序的更新检查
->在进行以下操作前，您需要先获取[PWD数据库配套更新检查模块](#PWD数据库配套更新检查模块)  
 
-程序内调用方法(python)：
+
+>注意：在进行以下操作前，您需要先获取"PWD数据库配套更新检查模块"
+
+### 更新检查（check）
+
+程序内调用方法：
 ```python
 import UPDATECHECK
 UPDATECHECK.check(version,uri)
@@ -50,10 +53,31 @@ UPDATECHECK.check("1.0.4","https://squirrel963.github.io/parrot_web_database/WTC
 以上代码将使更新检查器获取`WTC_clientversion`的数据  
 并将它与输入的程序版本`1.0.4`进行比较  
 
-### 对于Python程序的更新日志获取
->在进行以下操作前，您需要先获取[PWD数据库配套更新检查模块](#PWD数据库配套更新检查模块)  
+注意：该方法会产生仅占终端窗口1行的输出  
+如果您不需要这些输出，您可以试试下方`getversion()`方法
 
-程序内调用方法(python)：
+### 最新版本号获取（getversion）
+
+如果您认为`check()`方法不适用于您的程序  
+您可以试试直接获取**最新版本号**，如下：
+
+程序内调用方法：
+```python
+import UPDATECHECK
+UPDATECHECK.getversion(uri)
+``` 
+`uri`为最新版本号数据源地址(http/https)  
+ 例：  
+```python
+import UPDATECHECK
+netversion = UPDATECHECK.getversion("https://squirrel963.github.io/parrot_web_database/WTC_clientversion/index.md")
+``` 
+以上代码将使更新检查器获取`WTC_clientversion`的数据  
+并将它返回并赋值到`netversion`中
+
+### 更新日志获取（uplog）
+
+程序内调用方法：
 ```python
 import UPDATECHECK
 log = UPDATECHECK.uplog(uri)
@@ -65,4 +89,4 @@ import UPDATECHECK
 log = UPDATECHECK.check("https://squirrel963.github.io/parrot_web_database/WTC_allinfo/index.md")
 ```
 以上代码将使更新检查器获取`WTC_allinfo`的数据  
-并将数据打包成一个字典赋值到`log`
+并将数据打包成一个字典返回并赋值到`log`
