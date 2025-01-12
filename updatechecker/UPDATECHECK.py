@@ -20,6 +20,7 @@ def check(version, uri):
     except:
         print('[ 更新 ]：检查失败          ')
     return updated
+
 def getlog(uri):
     uplog = requests.get(uri, verify=False).content.decode("utf-8").replace("\n"," ").split("/")
     uplog.pop(0)
@@ -32,7 +33,22 @@ def getlog(uri):
     seg = zip(logvlist,logslist)
     return dict(seg)
 
+def getversion(uri):
+    try:
+        cloud = requests.get(uri, verify=False)
+        cloud_version = cloud.content
+        cloud_version = cloud_version.decode('utf-8')
+        cloud_version = cloud_version.strip()
+        versioncode = cloud.status_code
+        if versioncode == 200:
+            version = cloud_version
+        else:
+            version = "fall"
+    except:
+        version = f"fall_{versioncode}"
+    return version
+
 if __name__ == '__main__':
     print("UPDATECHECK模块版本自检：")
-    check("1.2" ,"https://squirrel963.github.io/parrot_web_database/UC_clientversion/index.md")
+    check("1.3" ,"https://squirrel963.github.io/parrot_web_database/UC_clientversion/index.md")
     wait = input("*按下enter退出*")
