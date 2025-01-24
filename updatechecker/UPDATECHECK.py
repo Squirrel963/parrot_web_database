@@ -43,12 +43,12 @@ def getversion(uri):
         if versioncode == 200:
             version = cloud_version
         else:
-            version = "fall"
+            version = f"fall_{versioncode}"
     except:
-        version = f"fall_{versioncode}"
+        version = "fall"
     return version
 
 if __name__ == '__main__':
     print("UPDATECHECK模块版本自检：")
-    check("1.3" ,"https://squirrel963.github.io/parrot_web_database/UC_clientversion/index.md")
+    check("1.4" ,"https://squirrel963.github.io/parrot_web_database/UC_clientversion/index.md")
     wait = input("*按下enter退出*")
