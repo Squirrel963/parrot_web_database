@@ -98,11 +98,11 @@ netversion = UPDATECHECK.getversion("https://squirrel963.github.io/parrot_web_da
 import UPDATECHECK
 log = UPDATECHECK.uplog(uri)
 ``` 
-`uri`为最新版本号数据源地址(http/https)  
+`uri`为更新日志数据源地址(http/https)  
  例：  
 ```python
 import UPDATECHECK
-log = UPDATECHECK.check("https://squirrel963.github.io/parrot_web_database/WTC_allinfo/index.md")
+log = UPDATECHECK.uplog("https://squirrel963.github.io/parrot_web_database/WTC_allinfo/index.md")
 ```
 以上代码将使更新检查器获取`WTC_allinfo`的数据  
 并将数据打包成一个字典返回并赋值到`log`
